@@ -28,7 +28,7 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /^\!log.*/i do |m|
-    content = m.message[4..-1]
+    content = m.message[5..-1]
     if content[0..1] == "t="
       topic = content[2..-1].split(" ")[0]
       content = content[(content.split(" ")[0].length+1)..-1]
