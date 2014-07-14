@@ -39,7 +39,7 @@ bot = Cinch::Bot.new do
 
   on :message, /^echo.*/ do |m|
     message = m.message.split("echo")[1]
-    m.reply "#{m.user}said \"#{message}\""
+    m.reply "#{m.user} said \"#{message}\""
   end
 
 end
