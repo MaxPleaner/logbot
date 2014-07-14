@@ -23,7 +23,7 @@ bot = Cinch::Bot.new do
     c.nick = "__maxbot"
     c.channels = [
       "##codeunion",
-      # "#appacad-sf-aug4-2014"
+      "#appacad-sf-aug4-2014"
     ]
   end
 
