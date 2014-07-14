@@ -1,0 +1,9 @@
+<h1>All Topics</h1>
+<hr>
+<ul>
+  <% @topics.each do |t| %>
+  <li>
+    <a href="topic/<%= t %>"><%= t %></a>
+  </li>
+  <% end %>
+</ul>

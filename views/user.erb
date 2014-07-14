@@ -1,0 +1,12 @@
+<h1>All posts by <%= @user %></h1>
+<hr>
+
+<ul>
+  <% @notes.each do |p| %>
+  <li>
+    Post: <em> <%= p.content %></em><br>
+    Topic: <%= p.topic %> <br>
+    Created at: <%= p.created_at %>
+  </li><br><br>
+  <% end %>
+</ul>

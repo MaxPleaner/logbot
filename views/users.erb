@@ -1,0 +1,9 @@
+<h1>All users that have submitted logs</h1>
+<hr>
+<ul>
+  <% @users.each do |u| %>
+  <li>
+    <a href="user/<%= u %>"><%= u %></a>
+  </li>
+  <% end %>
+</ul>
