@@ -20,7 +20,7 @@ DataMapper.auto_upgrade!
 bot = Cinch::Bot.new do
   configure do |c|
     c.server = "irc.freenode.org"
-    c.nick = "__maxbot"
+    c.nick = "logbot"
     c.channels = [
       "##codeunion",
       "#appacad-sf-aug4-2014"
@@ -47,7 +47,7 @@ bot = Cinch::Bot.new do
   end
 
   on :message, "logbot help" do |m|
-    m.reply "\n1. \"!echo\": any text following !echo will be echoed into the room.\n\n2. \"!log\": any text after !log will be saved to database (and viewable in the interface at logbot.ngrok.com). \nYou can specify a topic like so: \"log t=music mars volta is good\"\n Here, the topic is \"music\" and the message is \"mars volta is good\"\nyour username is attached to the log.\n"
+    m.reply "\n1. \"!echo\": any text following !echo will be echoed into the room.\n\n2. \"!log\": any text after !log will be saved to database (and viewable in the interface at logbot.ngrok.com). \nYou can specify a topic like so: \"log t=music mars volta is good\"\n Here, the topic is \"music\" and the message is \"mars volta is good\"\nyour username is attached to the log.\ngithub.com/maxpleaner/logbot"
   end
 end
   
