@@ -43,7 +43,9 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /.*logbot.*/i do |m|
-    m.reply "Did someone say my name? Type 'logbot help' for commands"
+    unless m.message == "logbot help"
+      m.reply "Did someone say my name? Type 'logbot help' for commands"
+    end
   end
 
   on :message, "logbot help" do |m|
