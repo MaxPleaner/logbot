@@ -52,5 +52,3 @@ $bot = Cinch::Bot.new do
     m.reply "\n1. \"!echo\": any text following !echo will be echoed into the room.\n\n2. \"!log\": any text after !log will be saved to database (and viewable in the interface at logbot.ngrok.com). \nYou can specify a topic like so: \"log t=music mars volta is good\"\n Only single-word topics are currently valid.\nyour username is attached to the log.\ngithub.com/maxpleaner/logbot"
   end
 end
-  
-bot.start

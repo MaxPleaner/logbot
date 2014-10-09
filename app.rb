@@ -2,7 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 require './cinch'
 
-Thread do
+Thread.new do
   $bot.start
 end
 
