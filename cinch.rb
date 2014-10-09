@@ -34,7 +34,7 @@ $bot = Cinch::Bot.new do
       content = content[(content.split(" ")[0].length+1)..-1]
     end
     Note.create(:user => m.user.nick, :content => content, :created_at => Time.now, :topic => topic)
-    m.reply "Message from #{m.user} was logged - see it at logbot.ngrok.com"
+    m.reply "Message from #{m.user} was logged - see it at http://maxp-logbot.herokuapp.com/"
   end
 
   on :message, /^\!echo.*/i do |m|
