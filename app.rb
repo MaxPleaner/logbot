@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'data_mapper'
 
-DataMapper.setup(:default, "sqlite:cinch.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 class Note
   include DataMapper::Resource

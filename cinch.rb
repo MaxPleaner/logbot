@@ -1,9 +1,9 @@
 require 'cinch'
-require 'sqlite3'
-require 'dm-sqlite-adapter'
+require 'pg'
+require 'dm-postgres-adapter'
 require 'data_mapper'
 
-DataMapper.setup(:default, "sqlite:cinch.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 class Note
   include DataMapper::Resource
