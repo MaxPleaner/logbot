@@ -1,5 +1,10 @@
 require 'sinatra'
 require 'data_mapper'
+require './cinch'
+
+Thread do
+  $bot.start
+end
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
